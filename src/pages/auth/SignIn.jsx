@@ -80,7 +80,7 @@ export default function SignIn() {
                     authenticateUser(e);
                   }}
                 >
-                  <div className="form-group mb-4">
+                  {/* <div className="form-group mb-4">
                     <label for="email">Your Email</label>
                     <div className="input-group">
                       <span className="input-group-text" id="basic-addon1">
@@ -109,10 +109,10 @@ export default function SignIn() {
                         Send OTP
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="form-group mb-4">
-                    <label for="otp">OTP</label>
+                    <label for="otp">Email</label>
                     <div className="input-group">
                       <span className="input-group-text" id="basic-addon1">
                         <span className="fas fa-lock"></span>
@@ -120,9 +120,9 @@ export default function SignIn() {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Enter OTP"
-                        id="otp"
-                        name="otp"
+                        placeholder="Enter Email"
+                        id="email"
+                        name="email"
                         autofocus
                         required
                       />
