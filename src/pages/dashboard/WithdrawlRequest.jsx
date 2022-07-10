@@ -47,6 +47,9 @@ export default function WithdrawlRequest() {
       renderCell: (params) => {
         return params.row.userInfo[0].xcelpay_wallet ?? "Wallet not updated.";
       },
+      valueGetter: (params) => {
+        return params.row.userInfo[0].xcelpay_wallet ?? "Wallet not updated.";
+      },
     },
     { field: "amount", headerName: "Amount", minWidth: 100, flex: 1 },
     {
@@ -55,6 +58,12 @@ export default function WithdrawlRequest() {
       minWidth: 100,
       flex: 1,
       renderCell: (params) => {
+        return {
+          income_wallet: "Cashoneer Wallet",
+          cashback_wallet: "Moneypal Wallet",
+        }[params.value];
+      },
+      valueGetter: (params) => {
         return {
           income_wallet: "Cashoneer Wallet",
           cashback_wallet: "Moneypal Wallet",
@@ -104,6 +113,9 @@ export default function WithdrawlRequest() {
       renderCell: (params) => {
         return params.row.userInfo[0].xcelpay_wallet ?? "Wallet not updated.";
       },
+      valueGetter: (params) => {
+        return params.row.userInfo[0].xcelpay_wallet ?? "Wallet not updated.";
+      },
     },
     {
       field: "txn_hash",
@@ -129,6 +141,12 @@ export default function WithdrawlRequest() {
       headerName: "From Wallet",
       minWidth: 150,
       renderCell: (params) => {
+        return {
+          income_wallet: "Cashoneer Wallet",
+          cashback_wallet: "Moneypal Wallet",
+        }[params.value];
+      },
+      valueGetter: (params) => {
         return {
           income_wallet: "Cashoneer Wallet",
           cashback_wallet: "Moneypal Wallet",
